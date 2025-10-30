@@ -112,7 +112,7 @@ export const insuranceData = [
     last_updated_date: "10/30/2025",
   },
   {
-    company_name: "Avoq Bank",
+    company_name: "Avo Bank",
     username: "avouzbank",
     followers: 54999,
     following: 1,
