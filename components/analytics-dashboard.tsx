@@ -36,9 +36,9 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
             className="h-10 w-10"
           />
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">Instagram kanallari statistikasi</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">Banklarning instagramdagi faoliyati va ko‘rsatkichlari</h1>
             <p className="text-slate-400">
-                Banklarning instagramdagi faoliyati va ko‘rsatkichlari
+                Yangilangan sana: 30-oktabr 2025-yil
             </p>
           </div>
         </div>
@@ -49,7 +49,7 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
           <MetricCard label="O‘rtacha jalb qilish darajasi" value={`${stats.avgEngagementRate}%`} icon="📈" />
           <MetricCard label="O‘rtacha layklar" value={stats.avgLikes} icon="❤️" />
           <MetricCard
-            label="Eng faol bank"
+            label="Eng faol kompaniya"
             value={stats.topBank.company_name}
             icon="🏆"
             subtitle={`${stats.topBank.followers.toLocaleString()} obunachi`}
@@ -70,8 +70,8 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
 
           <Card className="bg-slate-900/50 border-slate-800">
             <CardHeader>
-              <CardTitle className="text-white">Faollik ko‘rsatkichlari</CardTitle>
-              <CardDescription>O‘rtacha layklar va izohlar soni</CardDescription>
+              <CardTitle className="text-white">O‘rtacha layklar va izohlar soni</CardTitle>
+              <CardDescription>Har bir nashr uchun o‘rtacha layklar va izohlar soni</CardDescription>
             </CardHeader>
             <CardContent>
               <EngagementChart data={insuranceData} onBankClick={onBankClick} />
@@ -80,8 +80,8 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
 
           <Card className="bg-slate-900/50 border-slate-800">
             <CardHeader>
-              <CardTitle className="text-white">Postlar chastotasi</CardTitle>
-              <CardDescription>Har bir bank oyiga nechta post joylaydi</CardDescription>
+              <CardTitle className="text-white">O'rtacha nashrlar soni</CardTitle>
+              <CardDescription>Har bir kompaniya 1 oyda nechta nashr joylaydi</CardDescription>
             </CardHeader>
             <CardContent>
               <PostingFrequencyChart data={insuranceData} onBankClick={onBankClick} />
@@ -92,8 +92,8 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
         {/* Kompaniyalar ro‘yxati */}
         <Card className="bg-slate-900/50 border-slate-800">
           <CardHeader>
-            <CardTitle className="text-white">Barcha banklar</CardTitle>
-            <CardDescription>Kanal ma'lumotlari list ko‘rinishida</CardDescription>
+            <CardTitle className="text-white">Barcha barcha kanallari</CardTitle>
+            <CardDescription>Kanal malumotlari list ko'rinishida</CardDescription>
           </CardHeader>
           <CardContent>
             <BanksList data={insuranceData} onBankClick={onBankClick} />

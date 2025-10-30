@@ -28,18 +28,18 @@ export function BankDetailsModal({ bank, onClose }: BankDetailsModalProps) {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <DetailMetric label="Obunachilar" value={bank.followers.toLocaleString()} />
             <DetailMetric label="Obunalar" value={bank.following.toString()} />
-            <DetailMetric label="Jami postlar" value={bank.profile_posts_count.toString()} />
-            <DetailMetric label="Tahlil qilingan postlar" value={bank.posts_fetched.toString()} />
-            <DetailMetric label="O‘rtacha layklar" value={bank.avg_likes.toFixed(1)} />
-            <DetailMetric label="O‘rtacha izohlar" value={bank.avg_comments.toFixed(1)} />
+            <DetailMetric label="Jami nashrlar" value={bank.profile_posts_count.toString()} />
+            <DetailMetric label="Tahlil qilingan oxirgi nashrlar soni" value={bank.posts_fetched.toString()} />
+            <DetailMetric label="Har bir nashr uchun o‘rtacha layklar soni" value={bank.avg_likes.toFixed(1)} />
+            <DetailMetric label="Har bir nashr uchun o‘rtacha kommentlar soni" value={bank.avg_comments.toFixed(1)} />
           </div>
 
           {/* Faollik tahlili */}
           <div className="border-t border-slate-800 pt-6">
             <h3 className="text-lg font-semibold text-white mb-4">Faollik tahlili</h3>
             <div className="space-y-3">
-              <AnalysisRow label="Faollik darajasi" value={`${bank.er_percent.toFixed(2)}%`} color="blue" />
-              <AnalysisRow label="O‘rtacha oylik postlar" value={bank.posts_per_month.toFixed(1)} color="green" />
+              <AnalysisRow label="Jalb qilish darajasi" value={`${bank.er_percent.toFixed(2)}%`} color="blue" />
+              <AnalysisRow label="O‘rtacha oylik postlar soni" value={bank.posts_per_month.toFixed(1)} color="green" />
               <AnalysisRow label="Obunachilar soni" value={`${(bank.followers / 1000).toFixed(1)}K`} color="purple" />
             </div>
           </div>
@@ -59,7 +59,7 @@ export function BankDetailsModal({ bank, onClose }: BankDetailsModalProps) {
             <h3 className="text-lg font-semibold text-white mb-4">Ish faoliyati ko‘rsatkichlari</h3>
             <div className="space-y-3">
               <PerformanceBar
-                label="Faollik sifati"
+                label="Jalb qilish darajasi"
                 value={Math.min(100, bank.er_percent * 10)}
                 color="from-blue-500 to-cyan-500"
               />
@@ -70,7 +70,7 @@ export function BankDetailsModal({ bank, onClose }: BankDetailsModalProps) {
               />
               <PerformanceBar
                 label="Auditoriya qamrovi"
-                value={Math.min(100, (bank.followers / 200000) * 100)}
+                value={Math.min(100, (bank.followers / 20000) * 100)}
                 color="from-purple-500 to-pink-500"
               />
             </div>
