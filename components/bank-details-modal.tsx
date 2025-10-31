@@ -70,7 +70,7 @@ export function BankDetailsModal({ bank, onClose }: BankDetailsModalProps) {
               />
               <PerformanceBar
                 label="Auditoriya qamrovi"
-                value={Math.min(100, (bank.followers / 20000) * 100)}
+                value={Math.min(100, (bank.followers / 200000) * 100)}
                 color="from-purple-500 to-pink-500"
               />
             </div>
