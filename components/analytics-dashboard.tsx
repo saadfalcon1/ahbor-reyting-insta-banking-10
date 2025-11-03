@@ -92,7 +92,7 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
         {/* Kompaniyalar ro‘yxati */}
         <Card className="bg-slate-900/50 border-slate-800">
           <CardHeader>
-            <CardTitle className="text-white">Barcha barcha kanallari</CardTitle>
+            <CardTitle className="text-white">Barcha bank kanallari</CardTitle>
             <CardDescription>Kanal ma'lumotlari list ko'rinishida</CardDescription>
           </CardHeader>
           <CardContent>
