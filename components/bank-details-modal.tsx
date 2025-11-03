@@ -30,8 +30,8 @@ export function BankDetailsModal({ bank, onClose }: BankDetailsModalProps) {
             <DetailMetric label="Obunalar" value={bank.following.toString()} />
             <DetailMetric label="Jami nashrlar" value={bank.profile_posts_count.toString()} />
             <DetailMetric label="Tahlil qilingan oxirgi nashrlar soni" value={bank.posts_fetched.toString()} />
-            <DetailMetric label="Har bir nashr uchun o‘rtacha layklar soni" value={bank.avg_likes.toFixed(1)} />
-            <DetailMetric label="Har bir nashr uchun o‘rtacha kommentlar soni" value={bank.avg_comments.toFixed(1)} />
+            <DetailMetric label="Har bir nashr uchun o‘rtacha yoqtirishlar soni" value={bank.avg_likes.toFixed(1)} />
+            <DetailMetric label="Har bir nashr uchun o‘rtacha izohlar soni" value={bank.avg_comments.toFixed(1)} />
           </div>
 
           {/* Faollik tahlili */}
@@ -39,7 +39,7 @@ export function BankDetailsModal({ bank, onClose }: BankDetailsModalProps) {
             <h3 className="text-lg font-semibold text-white mb-4">Faollik tahlili</h3>
             <div className="space-y-3">
               <AnalysisRow label="Jalb qilish darajasi" value={`${bank.er_percent.toFixed(2)}%`} color="blue" />
-              <AnalysisRow label="O‘rtacha oylik postlar soni" value={bank.posts_per_month.toFixed(1)} color="green" />
+              <AnalysisRow label="O‘rtacha oylik nashrlar soni" value={bank.posts_per_month.toFixed(1)} color="green" />
               <AnalysisRow label="Obunachilar soni" value={`${(bank.followers / 1000).toFixed(1)}K`} color="purple" />
             </div>
           </div>
