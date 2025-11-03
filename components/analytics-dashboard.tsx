@@ -37,7 +37,7 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
               className="h-20 w-auto"
             />
             <div>
-              <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">Banklarning instagramdagi faoliyati va ko‘rsatkichlari</h1>
+              <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">Banklarning Instagram’dagi faoliyati va ko‘rsatkichlari</h1>
               <p className="text-slate-400">
                   Yangilangan sana: 31-oktabr 2025-yil
               </p>
@@ -67,7 +67,7 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           <Card className="bg-slate-900/50 border-slate-800">
             <CardHeader>
-              <CardTitle className="text-white">Eng ko‘p obunachiga ega top 10 banklar</CardTitle>
+              <CardTitle className="text-white">Eng ko‘p obunachilarga ega top-10 bank</CardTitle>
               <CardDescription>Instagramda eng katta auditoriyaga ega banklar</CardDescription>
             </CardHeader>
             <CardContent>
@@ -88,7 +88,7 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
           <Card className="bg-slate-900/50 border-slate-800">
             <CardHeader>
               <CardTitle className="text-white">O'rtacha nashrlar soni</CardTitle>
-              <CardDescription>Har bir kompaniya 1 oyda nechta nashr joylaydi</CardDescription>
+              <CardDescription>Har bir bank tomonidan bir oyda joylashtirilgan nashrlar soni</CardDescription>
             </CardHeader>
             <CardContent>
               <PostingFrequencyChart data={insuranceData} onBankClick={onBankClick} />
