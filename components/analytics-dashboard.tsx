@@ -37,7 +37,7 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
               className="h-20 w-auto"
             />
             <div>
-              <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">Banklarning Instagram’dagi faoliyati va ko‘rsatkichlari</h1>
+              <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">Banklarning Instagramdagi faoliyati va ko‘rsatkichlari</h1>
               <p className="text-slate-400">
                   Yangilangan sana: 31-oktabr 2025-yil
               </p>
