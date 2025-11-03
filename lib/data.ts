@@ -421,20 +421,6 @@ export const insuranceData = [
   },
   {
     "company_name": "Yangi Bank",
-    "username": "yangibank.business.official",
-    "followers": 10954,
-    "following": 2,
-    "profile_posts_count": 350,
-    "posts_fetched": 100,
-    "avg_likes": 20.16,
-    "avg_comments": 3.52,
-    "er_percent": 0.22,
-    "posts_per_month": 17,
-    "created_month": "1/2/2024",
-    "last_updated_date": "10/31/2025"
-  },
-  {
-    "company_name": "Yangi Bank (2-hisob)",
     "username": "yangibank.official",
     "followers": 4746,
     "following": 2,
