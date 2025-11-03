@@ -29,18 +29,26 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-6 md:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Sarlavha */}
-        <div className="mb-8 flex items-center space-x-3">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-            alt="Instagram"
-            className="h-10 w-10"
-          />
-          <div>
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">Banklarning instagramdagi faoliyati va ko‘rsatkichlari</h1>
-            <p className="text-slate-400">
-                Yangilangan sana: 31-oktabr 2025-yil
-            </p>
+        <div className="mb-8 flex justify-between items-start">
+          <div className="flex items-center space-x-3">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+              alt="Instagram"
+              className="h-20 w-auto"
+            />
+            <div>
+              <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">Banklarning instagramdagi faoliyati va ko‘rsatkichlari</h1>
+              <p className="text-slate-400">
+                  Yangilangan sana: 31-oktabr 2025-yil
+              </p>
+            </div>
           </div>
+          <img
+              src="ahborlogo.png"
+              alt="Ahbor logo"
+              className="h-16 md:h-20 w-auto object-contain max-w-[120px] md:max-w-[160px]"
+            />
+
         </div>
 
         {/* Asosiy ko‘rsatkichlar */}
