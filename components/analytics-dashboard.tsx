@@ -44,7 +44,7 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
             </div>
           </div>
           <img
-              src="ahborlogo.png"
+              src="/Ahborlogo.png"
               className="h-16 md:h-20 w-auto object-contain max-w-[120px] md:max-w-[160px]"
             />
 
