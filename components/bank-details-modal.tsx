@@ -46,7 +46,7 @@ export function BankDetailsModal({ bank, onClose }: BankDetailsModalProps) {
 
           {/* Kanal haqida ma’lumot */}
           <div className="border-t border-slate-800 pt-6">
-            <h3 className="text-lg font-semibold text-white mb-4">Kanal haqida ma’lumot</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">Kanal ma’lumotlari</h3>
             <div className="space-y-2 text-sm">
               <InfoRow label="Kanal yaratilgan sana" value={bank.channel_created_date} />
               <InfoRow label="So‘nggi yangilanish" value={bank.last_updated_date} />
