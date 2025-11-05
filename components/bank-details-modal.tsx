@@ -26,7 +26,7 @@ export function BankDetailsModal({ bank, onClose }: BankDetailsModalProps) {
         <CardContent className="space-y-6">
           {/* Ijtimoiy tarmoq statistikasi */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <DetailMetric label="Obunachilar" value={bank.followers.toLocaleString()} />
+            <DetailMetric label="Obunachilar soni" value={bank.followers.toLocaleString()} />
             <DetailMetric label="Obunalar" value={bank.following.toString()} />
             <DetailMetric label="Jami nashrlar" value={bank.profile_posts_count.toString()} />
             <DetailMetric label="Tahlil qilingan oxirgi nashrlar soni" value={bank.posts_fetched.toString()} />
