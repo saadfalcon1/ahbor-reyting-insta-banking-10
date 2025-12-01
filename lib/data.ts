@@ -1,6 +1,6 @@
 export const insuranceData = [
   {
-    company_name: "Uzum Bank",
+    company_name: "UZUM BANK",
     username: "uzumbank_uz",
     followers: 70196,
     following: 4,
@@ -15,7 +15,7 @@ export const insuranceData = [
     last_updated_date: "12/1/2025"
   },
   {
-    company_name: "Anorbank",
+    company_name: "ANOR BANK",
     username: "anorbank",
     followers: 142715,
     following: 3,
@@ -120,7 +120,7 @@ export const insuranceData = [
     last_updated_date: "12/1/2025"
   },
   {
-    company_name: "Avo Bank",
+    company_name: "AVO bank",
     username: "avouzbank",
     followers: 57337,
     following: 1,
@@ -345,21 +345,6 @@ export const insuranceData = [
     last_updated_date: "12/1/2025"
   },
   {
-    company_name: "Yangi Bank (biznes)",
-    username: "yangibank.business.official",
-    followers: 11395,
-    following: 2,
-    profile_posts_count: 365,
-    posts_fetched: 100,
-    avg_likes: 18.55,
-    avg_comments: 3.24,
-    avg_views: 0,
-    er_percent: 0.191,
-    posts_per_month: 0, // eski jsonda yo‘q, xohlasangiz qo‘shamiz
-    channel_created_date: "",
-    last_updated_date: "12/1/2025"
-  },
-  {
     company_name: "BRB",
     username: "brb_info",
     followers: 13343,
@@ -375,7 +360,7 @@ export const insuranceData = [
     last_updated_date: "12/1/2025"
   },
   {
-    company_name: "APEX Bank",
+    company_name: "APEX BANK",
     username: "apexbank.uz",
     followers: 9083,
     following: 8,
@@ -405,7 +390,7 @@ export const insuranceData = [
     last_updated_date: "12/1/2025"
   },
   {
-    company_name: "Hayot Bank",
+    company_name: "HAYOT BANK",
     username: "hayotbank_uz",
     followers: 7995,
     following: 1,
@@ -465,7 +450,7 @@ export const insuranceData = [
     last_updated_date: "12/1/2025"
   },
   {
-    company_name: "Yangi Bank",
+    company_name: "YANGI BANK",
     username: "yangibank.official",
     followers: 5283,
     following: 2,
