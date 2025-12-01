@@ -11,7 +11,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.211,
     posts_per_month: 3,
-    created_month: "1/7/2024",
+    channel_created_date: "1/7/2024",
     last_updated_date: "12/1/2025"
   },
   {
@@ -26,7 +26,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.512,
     posts_per_month: 19,
-    created_month: "1/2/2020",
+    channel_created_date: "1/2/2020",
     last_updated_date: "12/1/2025"
   },
   {
@@ -41,7 +41,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.345,
     posts_per_month: 11,
-    created_month: "1/2/2017",
+    channel_created_date: "1/2/2017",
     last_updated_date: "12/1/2025"
   },
   {
@@ -56,7 +56,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.366,
     posts_per_month: 14,
-    created_month: "1/5/2018",
+    channel_created_date: "1/5/2018",
     last_updated_date: "12/1/2025"
   },
   {
@@ -71,7 +71,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.404,
     posts_per_month: 21,
-    created_month: "1/5/2020",
+    channel_created_date: "1/5/2020",
     last_updated_date: "12/1/2025"
   },
   {
@@ -86,7 +86,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 1.499,
     posts_per_month: 8,
-    created_month: "1/12/2018",
+    channel_created_date: "1/12/2018",
     last_updated_date: "12/1/2025"
   },
   {
@@ -101,7 +101,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 2.594,
     posts_per_month: 22,
-    created_month: "1/7/2018",
+    channel_created_date: "1/7/2018",
     last_updated_date: "12/1/2025"
   },
   {
@@ -116,7 +116,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.373,
     posts_per_month: 8,
-    created_month: "1/9/2017",
+    channel_created_date: "1/9/2017",
     last_updated_date: "12/1/2025"
   },
   {
@@ -131,7 +131,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 2.947,
     posts_per_month: 6,
-    created_month: "1/12/2022",
+    channel_created_date: "1/12/2022",
     last_updated_date: "12/1/2025"
   },
   {
@@ -146,7 +146,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.159,
     posts_per_month: 14,
-    created_month: "1/10/2018",
+    channel_created_date: "1/10/2018",
     last_updated_date: "12/1/2025"
   },
   {
@@ -161,7 +161,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.299,
     posts_per_month: 18,
-    created_month: "1/4/2018",
+    channel_created_date: "1/4/2018",
     last_updated_date: "12/1/2025"
   },
   {
@@ -176,7 +176,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.039,
     posts_per_month: 12,
-    created_month: "1/2/2017",
+    channel_created_date: "1/2/2017",
     last_updated_date: "12/1/2025"
   },
   {
@@ -191,7 +191,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.083,
     posts_per_month: 14,
-    created_month: "1/6/2016",
+    channel_created_date: "1/6/2016",
     last_updated_date: "12/1/2025"
   },
   {
@@ -206,7 +206,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 3.28,
     posts_per_month: 16,
-    created_month: "1/7/2018",
+    channel_created_date: "1/7/2018",
     last_updated_date: "12/1/2025"
   },
   {
@@ -221,7 +221,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 1.446,
     posts_per_month: 20,
-    created_month: "1/4/2019",
+    channel_created_date: "1/4/2019",
     last_updated_date: "12/1/2025"
   },
   {
@@ -236,7 +236,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.473,
     posts_per_month: 13,
-    created_month: "1/11/2019",
+    channel_created_date: "1/11/2019",
     last_updated_date: "12/1/2025"
   },
   {
@@ -251,7 +251,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 13.54,
     posts_per_month: 7,
-    created_month: "1/12/2015",
+    channel_created_date: "1/12/2015",
     last_updated_date: "12/1/2025"
   },
   {
@@ -266,7 +266,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.225,
     posts_per_month: 12,
-    created_month: "1/12/2018",
+    channel_created_date: "1/12/2018",
     last_updated_date: "12/1/2025"
   },
   {
@@ -281,7 +281,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.364,
     posts_per_month: 14,
-    created_month: "1/10/2019",
+    channel_created_date: "1/10/2019",
     last_updated_date: "12/1/2025"
   },
   {
@@ -296,7 +296,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.32,
     posts_per_month: 20,
-    created_month: "1/4/2018",
+    channel_created_date: "1/4/2018",
     last_updated_date: "12/1/2025"
   },
   {
@@ -311,7 +311,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.595,
     posts_per_month: 9,
-    created_month: "1/2/2014",
+    channel_created_date: "1/2/2014",
     last_updated_date: "12/1/2025"
   },
   {
@@ -326,7 +326,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 8.422,
     posts_per_month: 9,
-    created_month: "1/10/2018",
+    channel_created_date: "1/10/2018",
     last_updated_date: "12/1/2025"
   },
   {
@@ -341,7 +341,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 3.48,
     posts_per_month: 11,
-    created_month: "1/9/2019",
+    channel_created_date: "1/9/2019",
     last_updated_date: "12/1/2025"
   },
   {
@@ -356,7 +356,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.191,
     posts_per_month: 0, // eski jsonda yo‘q, xohlasangiz qo‘shamiz
-    created_month: "",
+    channel_created_date: "",
     last_updated_date: "12/1/2025"
   },
   {
@@ -371,7 +371,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.191,
     posts_per_month: 20,
-    created_month: "1/12/2015",
+    channel_created_date: "1/12/2015",
     last_updated_date: "12/1/2025"
   },
   {
@@ -386,7 +386,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 1.379,
     posts_per_month: 1,
-    created_month: "1/2/2022",
+    channel_created_date: "1/2/2022",
     last_updated_date: "12/1/2025"
   },
   {
@@ -401,7 +401,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.422,
     posts_per_month: 5,
-    created_month: "1/4/2018",
+    channel_created_date: "1/4/2018",
     last_updated_date: "12/1/2025"
   },
   {
@@ -416,7 +416,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 4.009,
     posts_per_month: 5,
-    created_month: "1/7/2022",
+    channel_created_date: "1/7/2022",
     last_updated_date: "12/1/2025"
   },
   {
@@ -431,7 +431,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 0.647,
     posts_per_month: 11,
-    created_month: "1/4/2018",
+    channel_created_date: "1/4/2018",
     last_updated_date: "12/1/2025"
   },
   {
@@ -446,7 +446,7 @@ export const insuranceData = [
     avg_views: 4.49,
     er_percent: 0.532,
     posts_per_month: 6,
-    created_month: "1/3/2019",
+    channel_created_date: "1/3/2019",
     last_updated_date: "12/1/2025"
   },
   {
@@ -461,7 +461,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 3.059,
     posts_per_month: 1,
-    created_month: "1/12/2020",
+    channel_created_date: "1/12/2020",
     last_updated_date: "12/1/2025"
   },
   {
@@ -476,7 +476,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 1.104,
     posts_per_month: 4,
-    created_month: "1/12/2022",
+    channel_created_date: "1/12/2022",
     last_updated_date: "12/1/2025"
   },
   {
@@ -491,7 +491,7 @@ export const insuranceData = [
     avg_views: 0,
     er_percent: 3.466,
     posts_per_month: 2,
-    created_month: "1/4/2021",
+    channel_created_date: "1/4/2021",
     last_updated_date: "12/1/2025"
   }
 ];
