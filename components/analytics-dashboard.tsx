@@ -94,7 +94,7 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
 
           <Card className="bg-slate-900/50 border-slate-800">
             <CardHeader>
-              <CardTitle className="text-white">O'rtacha yoqtirishlar va izohlar soni</CardTitle>
+              <CardTitle className="text-white">O'rtacha yoqtirishlar va o'rtacha izohlar soni</CardTitle>
               <CardDescription>Har bir nashr uchun o'rtacha yoqtirishlar va o'rtacha izohlar soni</CardDescription>
             </CardHeader>
             <CardContent>
