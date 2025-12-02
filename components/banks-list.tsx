@@ -74,7 +74,7 @@ export function BanksList({ data, onBankClick }: BanksListProps) {
                 onClick={() => handleSort("avg_likes")}
                 className="text-right py-3 px-4 text-slate-400 font-semibold cursor-pointer hover:text-white"
               >
-                O'rtacha yoqtirishlar {sortKey === "avg_likes" && (sortOrder === "asc" ? "▲" : "▼")}
+                O'rtacha yoqtirishlar soni {sortKey === "avg_likes" && (sortOrder === "asc" ? "▲" : "▼")}
               </th>
               <th
                 onClick={() => handleSort("er_percent")}
