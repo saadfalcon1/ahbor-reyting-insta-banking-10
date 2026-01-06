@@ -28,11 +28,6 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
   const stats = useMemo(() => {
     const totalFollowers = insuranceData.reduce((sum, bank) => sum + bank.followers, 0)
 
-    const avgEngagementRate = (
-      insuranceData.reduce((sum, bank) => sum + bank.er_percent, 0) /
-      insuranceData.length
-    ).toFixed(2)
-
     const avgLikes = (
       insuranceData.reduce((sum, bank) => sum + bank.avg_likes, 0) /
       insuranceData.length
@@ -42,7 +37,21 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
       current.followers > prev.followers ? current : prev
     )
 
-    return { totalFollowers, avgEngagementRate, avgLikes, topBank }
+    // Noyabr va dekabr farqi
+    const novData = INSURANCE_BY_MONTH["nov"] ?? []
+    const decData = INSURANCE_BY_MONTH["dec"] ?? []
+
+    const novTotalFollowers = novData.reduce((sum, bank) => sum + bank.followers, 0)
+    const decTotalFollowers = decData.reduce((sum, bank) => sum + bank.followers, 0)
+
+    const followersDiff = decTotalFollowers - novTotalFollowers
+
+    return {
+      totalFollowers,
+      avgLikes,
+      topBank,
+      followersDiff,
+    }
   }, [insuranceData])
 
   return (
@@ -110,10 +119,14 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
 
         {/* ASOSIY KO'RSATKICHLAR */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          <MetricCard label="Jami obunachilar" value={stats.totalFollowers.toLocaleString()} icon="👥" />
           <MetricCard
-            label="O'rtacha jalb qilish darajasi"
-            value={`${stats.avgEngagementRate}%`}
+            label="Jami obunachilar"
+            value={stats.totalFollowers.toLocaleString()}
+            icon="👥"
+          />
+          <MetricCard
+            label="Umumiy obunachilar o'sishi (Noyabr - Dekabr)"
+            value={stats.followersDiff.toLocaleString()}
             icon="📈"
           />
           <MetricCard
