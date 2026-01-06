@@ -39,7 +39,7 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
               <h1 className="text-lg font-bold text-white break-words">
                 Banklarning Instagramdagi faoliyati va ko'rsatkichlari
               </h1>
-              <p className="text-slate-400 text-xs">Yangilangan sana: Dekabr holatiga ko'ra</p>
+              <p className="text-slate-400 text-xs"></p>
             </div>
             <img src="/Ahborlogo.png" alt="Ahbor" className="h-6 w-auto object-contain shrink-0" />
           </div>
@@ -56,7 +56,7 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
                 <h1 className="text-3xl md:text-4xl font-bold text-white mb-1 break-words">
                   Banklarning Instagramdagi faoliyati va ko'rsatkichlari
                 </h1>
-                <p className="text-slate-400">Yangilangan sana: Dekabr holatiga ko'ra</p>
+                <p className="text-slate-400"></p>
               </div>
             </div>
             <img
