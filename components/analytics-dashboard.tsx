@@ -1,34 +1,57 @@
 "use client"
 
-import { useMemo } from "react"
+import { useMemo, useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { FollowersChart } from "./charts/followers-chart"
 import { EngagementChart } from "./charts/engagement-chart"
 import { PostingFrequencyChart } from "./charts/posting-frequency-chart"
 import { BanksList } from "./banks-list"
-import { insuranceData } from "@/lib/data"
+import { INSURANCE_BY_MONTH } from "@/lib/monthly-data"
+
+type MonthKey = keyof typeof INSURANCE_BY_MONTH
+type Bank = (typeof INSURANCE_BY_MONTH)["dec"][0]
 
 interface AnalyticsDashboardProps {
-  onBankClick: (bank: (typeof insuranceData)[0]) => void
+  onBankClick: (bank: Bank) => void
 }
 
+const MONTHS: { key: MonthKey; label: string }[] = [
+  { key: "nov", label: "Noyabr" },
+  { key: "dec", label: "Dekabr" },
+]
+
 export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
+  const [selectedMonth, setSelectedMonth] = useState<MonthKey>("dec")
+
+  const insuranceData = INSURANCE_BY_MONTH[selectedMonth]
+
   const stats = useMemo(() => {
     const totalFollowers = insuranceData.reduce((sum, bank) => sum + bank.followers, 0)
+
     const avgEngagementRate = (
-      insuranceData.reduce((sum, bank) => sum + bank.er_percent, 0) / insuranceData.length
+      insuranceData.reduce((sum, bank) => sum + bank.er_percent, 0) /
+      insuranceData.length
     ).toFixed(2)
-    const avgLikes = (insuranceData.reduce((sum, bank) => sum + bank.avg_likes, 0) / insuranceData.length).toFixed(1)
-    const topBank = insuranceData.reduce((prev, current) => (current.followers > prev.followers ? current : prev))
+
+    const avgLikes = (
+      insuranceData.reduce((sum, bank) => sum + bank.avg_likes, 0) /
+      insuranceData.length
+    ).toFixed(1)
+
+    const topBank = insuranceData.reduce((prev, current) =>
+      current.followers > prev.followers ? current : prev
+    )
 
     return { totalFollowers, avgEngagementRate, avgLikes, topBank }
-  }, [])
+  }, [insuranceData])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-6 md:p-8">
       <div className="max-w-7xl mx-auto">
+
+        {/* HEADER */}
         <div className="mb-8">
-          {/* Mobile version: all items in one row */}
+          {/* Mobile */}
           <div className="flex md:hidden items-center justify-between gap-2">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
@@ -44,7 +67,7 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
             <img src="/Ahborlogo.png" alt="Ahbor" className="h-6 w-auto object-contain shrink-0" />
           </div>
 
-          {/* Desktop version: original layout */}
+          {/* Desktop */}
           <div className="hidden md:flex items-start md:items-center justify-between gap-4">
             <div className="flex items-center gap-3 min-w-0 flex-1">
               <img
@@ -67,11 +90,37 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
           </div>
         </div>
 
-        {/* Asosiy ko'rsatkichlar */}
+        {/* 🔘 OY FILTERI — SARLAVHADAN PASTDA */}
+        <div className="flex gap-2 mb-6">
+          {MONTHS.map((month) => (
+            <button
+              key={month.key}
+              onClick={() => setSelectedMonth(month.key)}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition
+                ${
+                  selectedMonth === month.key
+                    ? "bg-blue-600 text-white"
+                    : "bg-slate-800 text-slate-300 hover:bg-slate-700"
+                }`}
+            >
+              {month.label}
+            </button>
+          ))}
+        </div>
+
+        {/* ASOSIY KO'RSATKICHLAR */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <MetricCard label="Jami obunachilar" value={stats.totalFollowers.toLocaleString()} icon="👥" />
-          <MetricCard label="O'rtacha jalb qilish darajasi" value={`${stats.avgEngagementRate}%`} icon="📈" />
-          <MetricCard label="Har bir nashr uchun o'rtacha yoqtirishlar soni" value={stats.avgLikes} icon="❤️" />
+          <MetricCard
+            label="O'rtacha jalb qilish darajasi"
+            value={`${stats.avgEngagementRate}%`}
+            icon="📈"
+          />
+          <MetricCard
+            label="Har bir nashr uchun o'rtacha yoqtirishlar soni"
+            value={stats.avgLikes}
+            icon="❤️"
+          />
           <MetricCard
             label="Eng ko'p obunachilarga ega bank"
             value={stats.topBank.company_name}
@@ -80,12 +129,16 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
           />
         </div>
 
-        {/* Diagrammalar */}
+        {/* DIAGRAMMALAR */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           <Card className="bg-slate-900/50 border-slate-800">
             <CardHeader>
-              <CardTitle className="text-white">Eng ko'p obunachilarga ega top-10 banklar</CardTitle>
-              <CardDescription>Instagramda eng katta auditoriyaga ega banklar</CardDescription>
+              <CardTitle className="text-white">
+                Eng ko'p obunachilarga ega top-10 banklar
+              </CardTitle>
+              <CardDescription>
+                Instagramda eng katta auditoriyaga ega banklar
+              </CardDescription>
             </CardHeader>
             <CardContent>
               <FollowersChart data={insuranceData} onBankClick={onBankClick} />
@@ -94,8 +147,12 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
 
           <Card className="bg-slate-900/50 border-slate-800">
             <CardHeader>
-              <CardTitle className="text-white">O'rtacha yoqtirishlar va o'rtacha izohlar soni</CardTitle>
-              <CardDescription>Har bir nashr uchun o'rtacha yoqtirishlar va o'rtacha izohlar soni</CardDescription>
+              <CardTitle className="text-white">
+                O'rtacha yoqtirishlar va o'rtacha izohlar soni
+              </CardTitle>
+              <CardDescription>
+                Har bir nashr uchun o'rtacha yoqtirishlar va o'rtacha izohlar soni
+              </CardDescription>
             </CardHeader>
             <CardContent>
               <EngagementChart data={insuranceData} onBankClick={onBankClick} />
@@ -105,7 +162,9 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
           <Card className="bg-slate-900/50 border-slate-800">
             <CardHeader>
               <CardTitle className="text-white">O'rtacha nashrlar soni</CardTitle>
-              <CardDescription>Har bir bank tomonidan bir oyda joylashtirilgan nashrlar soni</CardDescription>
+              <CardDescription>
+                Har bir bank tomonidan bir oyda joylashtirilgan nashrlar soni
+              </CardDescription>
             </CardHeader>
             <CardContent>
               <PostingFrequencyChart data={insuranceData} onBankClick={onBankClick} />
@@ -113,11 +172,13 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
           </Card>
         </div>
 
-        {/* Kompaniyalar ro'yxati */}
+        {/* RO'YXAT */}
         <Card className="bg-slate-900/50 border-slate-800">
           <CardHeader>
             <CardTitle className="text-white">Barcha bank kanallari</CardTitle>
-            <CardDescription>Kanal ma'lumotlari ro'yxat ko'rinishida</CardDescription>
+            <CardDescription>
+              Kanal ma'lumotlari ro'yxat ko'rinishida
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <BanksList data={insuranceData} onBankClick={onBankClick} />
