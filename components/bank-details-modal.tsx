@@ -38,7 +38,6 @@ export function BankDetailsModal({ bank, onClose }: BankDetailsModalProps) {
           <div className="border-t border-slate-800 pt-6">
             <h3 className="text-lg font-semibold text-white mb-4">Faollik tahlili</h3>
             <div className="space-y-3">
-              <AnalysisRow label="Jalb qilish darajasi" value={`${bank.er_percent.toFixed(2)}%`} color="blue" />
               <AnalysisRow label="O‘rtacha oylik nashrlar soni" value={bank.posts_per_month.toFixed(1)} color="green" />
               <AnalysisRow label="Obunachilar soni" value={`${(bank.followers / 1000).toFixed(1)}K`} color="purple" />
             </div>

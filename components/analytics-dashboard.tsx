@@ -133,7 +133,7 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
             icon="👥"
           />
           <MetricCard
-            label="Obunachilar o'sishi"
+            label="Obunachilar o'sishi (oy bo'yicha)"
             value={stats.followersDiff.toLocaleString()}
             icon="📈"
           />
