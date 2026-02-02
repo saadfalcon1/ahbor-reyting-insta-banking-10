@@ -18,10 +18,11 @@ interface AnalyticsDashboardProps {
 const MONTHS: { key: MonthKey; label: string }[] = [
   { key: "nov", label: "Noyabr" },
   { key: "dec", label: "Dekabr" },
+  { key: "jan", label: "Yanvar" }
 ]
 
 export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
-  const [selectedMonth, setSelectedMonth] = useState<MonthKey>("dec")
+  const [selectedMonth, setSelectedMonth] = useState<MonthKey>("jan")
 
   const insuranceData = INSURANCE_BY_MONTH[selectedMonth]
 
@@ -37,14 +38,21 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
       current.followers > prev.followers ? current : prev
     )
 
-    // Noyabr va dekabr farqi
-    const novData = INSURANCE_BY_MONTH["nov"] ?? []
-    const decData = INSURANCE_BY_MONTH["dec"] ?? []
+    // Obunachilar o'sishini hisoblash - tanlangan oyga qarab
+    let followersDiff = 0
 
-    const novTotalFollowers = novData.reduce((sum, bank) => sum + bank.followers, 0)
-    const decTotalFollowers = decData.reduce((sum, bank) => sum + bank.followers, 0)
-
-    const followersDiff = decTotalFollowers - novTotalFollowers
+    if (selectedMonth === "dec") {
+      // Dekabr tanlangan bo'lsa: Dekabr - Noyabr
+      const novData = INSURANCE_BY_MONTH["nov"] ?? []
+      const novTotalFollowers = novData.reduce((sum, bank) => sum + bank.followers, 0)
+      followersDiff = totalFollowers - novTotalFollowers
+    } else if (selectedMonth === "jan") {
+      // Yanvar tanlangan bo'lsa: Yanvar - Dekabr
+      const decData = INSURANCE_BY_MONTH["dec"] ?? []
+      const decTotalFollowers = decData.reduce((sum, bank) => sum + bank.followers, 0)
+      followersDiff = totalFollowers - decTotalFollowers
+    }
+    // Noyabr uchun followersDiff = 0 (oldingi oy ma'lumoti yo'q)
 
     return {
       totalFollowers,
@@ -52,7 +60,7 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
       topBank,
       followersDiff,
     }
-  }, [insuranceData])
+  }, [insuranceData, selectedMonth])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-6 md:p-8">
@@ -125,7 +133,7 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
             icon="👥"
           />
           <MetricCard
-            label="Bank sektorida obunachilar o‘sishi (Noyabr–Dekabr)"
+            label="Obunachilar o'sishi"
             value={stats.followersDiff.toLocaleString()}
             icon="📈"
           />
