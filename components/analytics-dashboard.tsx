@@ -139,7 +139,7 @@ export function AnalyticsDashboard({ onBankClick }: AnalyticsDashboardProps) {
           />
           <MetricCard
             label="Har bir nashr uchun o'rtacha yoqtirishlar soni"
-            value={stats.avgLikes}
+            value={Math.round(stats.avgLikes)}
             icon="❤️"
           />
           <MetricCard
